@@ -21,7 +21,7 @@
         self.mapURL = response[@"mapURL"];
         self.name = response[@"name"];
         self.url = response[@"url"];
-        self.worldStatus = response[@"worldStatus"];
+        self.worldStatus = [response valueForKeyPath:@"worldStatus.description"];
 
     }
     return self;

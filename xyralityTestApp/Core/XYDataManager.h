@@ -14,6 +14,8 @@ typedef void(^XYLoadWorldsFailureBlock)(NSError *error);
 @class XYUser;
 @interface XYDataManager : NSObject
 
+@property (nonatomic, strong) NSMutableArray *loadedWorlds;
+
 + (instancetype)sharedManager;
 - (void)getAvailableWorldsForUser:(XYUser *)user withSuccess:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock;
 

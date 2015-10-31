@@ -10,13 +10,13 @@
 
 @interface XYGameWorld : NSObject
 
-@property (nonatomic, strong) NSString *country;
-@property (nonatomic, strong) NSNumber *worldId;
-@property (nonatomic, strong) NSString *language;
-@property (nonatomic, strong) NSString *mapURL;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, strong) NSString *worldStatus;
+@property (nonatomic, copy) NSString *country;
+@property (nonatomic, copy) NSNumber *worldId;
+@property (nonatomic, copy) NSString *language;
+@property (nonatomic, copy) NSString *mapURL;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *worldStatus;
 
 - (instancetype)initWithResponse:(NSDictionary *)response;
 

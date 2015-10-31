@@ -10,11 +10,6 @@
 #import "XYNetworkManager.h"
 #import "XYGameWorld.h"
 
-@interface XYDataManager ();
-@property (nonatomic, strong) NSMutableArray *loadedWorlds;
-@end
-
-
 
 @implementation XYDataManager
 

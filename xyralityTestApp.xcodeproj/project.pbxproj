@@ -12,12 +12,12 @@
 		DA362CFF1BE504D500A77151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA362CFD1BE504D500A77151 /* Main.storyboard */; };
 		DA362D011BE504D500A77151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA362D001BE504D500A77151 /* Assets.xcassets */; };
 		DA362D041BE504D500A77151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA362D021BE504D500A77151 /* LaunchScreen.storyboard */; };
-		DA362D121BE50CE100A77151 /* XYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D111BE50CE100A77151 /* XYLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DA362D191BE519E300A77151 /* XYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D181BE519E300A77151 /* XYDataManager.m */; settings = {ASSET_TAGS = (); }; };
-		DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1B1BE5227200A77151 /* XYNetworkManager.m */; settings = {ASSET_TAGS = (); }; };
-		DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1E1BE5292D00A77151 /* XYUser.m */; settings = {ASSET_TAGS = (); }; };
-		DA362D221BE54B3600A77151 /* XYGameWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D211BE54B3600A77151 /* XYGameWorld.m */; settings = {ASSET_TAGS = (); }; };
-		DA362D251BE5514900A77151 /* XYWorldsListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D241BE5514900A77151 /* XYWorldsListTable.m */; settings = {ASSET_TAGS = (); }; };
+		DA362D121BE50CE100A77151 /* XYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D111BE50CE100A77151 /* XYLoginViewController.m */; };
+		DA362D191BE519E300A77151 /* XYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D181BE519E300A77151 /* XYDataManager.m */; };
+		DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1B1BE5227200A77151 /* XYNetworkManager.m */; };
+		DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1E1BE5292D00A77151 /* XYUser.m */; };
+		DA362D221BE54B3600A77151 /* XYGameWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D211BE54B3600A77151 /* XYGameWorld.m */; };
+		DA362D251BE5514900A77151 /* XYWorldsListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D241BE5514900A77151 /* XYWorldsListTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,9 +73,10 @@
 		DA362CF31BE504D500A77151 /* xyralityTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA362D0B1BE50B3D00A77151 /* Controllers */,
 				DA362CF71BE504D500A77151 /* AppDelegate.h */,
 				DA362CF81BE504D500A77151 /* AppDelegate.m */,
+				DA362D0B1BE50B3D00A77151 /* Controllers */,
+				DA362D131BE5193600A77151 /* Core */,
 				DA362CFD1BE504D500A77151 /* Main.storyboard */,
 				DA362D001BE504D500A77151 /* Assets.xcassets */,
 				DA362D021BE504D500A77151 /* LaunchScreen.storyboard */,
@@ -96,8 +97,8 @@
 		DA362D0B1BE50B3D00A77151 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA362D131BE5193600A77151 /* Core */,
 				DA362D0C1BE50BA400A77151 /* Login */,
+				DABB30041BE5746300187A41 /* WorldsList */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -107,8 +108,6 @@
 			children = (
 				DA362D101BE50CE100A77151 /* XYLoginViewController.h */,
 				DA362D111BE50CE100A77151 /* XYLoginViewController.m */,
-				DA362D231BE5514900A77151 /* XYWorldsListTable.h */,
-				DA362D241BE5514900A77151 /* XYWorldsListTable.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -126,6 +125,15 @@
 				DA362D211BE54B3600A77151 /* XYGameWorld.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		DABB30041BE5746300187A41 /* WorldsList */ = {
+			isa = PBXGroup;
+			children = (
+				DA362D231BE5514900A77151 /* XYWorldsListTable.h */,
+				DA362D241BE5514900A77151 /* XYWorldsListTable.m */,
+			);
+			name = WorldsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
