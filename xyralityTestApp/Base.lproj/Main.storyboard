@@ -26,12 +26,45 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Qa-Ag-Isw">
+                                <rect key="frame" x="200" y="121" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="je8-Ph-Lmb"/>
+                                    <constraint firstAttribute="height" constant="30" id="ng6-Vh-sHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-gD-37W">
+                                <rect key="frame" x="200" y="157" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Czs-Iu-RR8"/>
+                                    <constraint firstAttribute="width" constant="200" id="Z4u-ED-dzq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leg-MN-R7T">
+                                <rect key="frame" x="200" y="193" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.93725496530532837" green="0.95686280727386475" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jX2-iS-VRA"/>
+                                    <constraint firstAttribute="height" constant="30" id="o3m-u9-1Jp"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XWR-gD-37W" firstAttribute="centerX" secondItem="4Qa-Ag-Isw" secondAttribute="centerX" id="1og-Nr-diT"/>
+                            <constraint firstItem="XWR-gD-37W" firstAttribute="top" secondItem="4Qa-Ag-Isw" secondAttribute="bottom" constant="6" id="240-0q-OzZ"/>
+                            <constraint firstItem="leg-MN-R7T" firstAttribute="centerX" secondItem="XWR-gD-37W" secondAttribute="centerX" id="P60-4m-m4a"/>
                             <constraint firstItem="aUt-EV-FMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="SKW-wV-5tM"/>
                             <constraint firstItem="aUt-EV-FMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="WdP-PY-gcy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aUt-EV-FMg" secondAttribute="trailing" constant="10" id="ute-8L-ey9"/>
+                            <constraint firstItem="4Qa-Ag-Isw" firstAttribute="top" secondItem="aUt-EV-FMg" secondAttribute="bottom" constant="6" id="vx7-4M-OJU"/>
+                            <constraint firstItem="leg-MN-R7T" firstAttribute="top" secondItem="XWR-gD-37W" secondAttribute="bottom" constant="6" id="wVS-xC-fiu"/>
+                            <constraint firstItem="4Qa-Ag-Isw" firstAttribute="centerX" secondItem="aUt-EV-FMg" secondAttribute="centerX" id="yeY-0B-0xN"/>
                         </constraints>
                     </view>
                 </viewController>
