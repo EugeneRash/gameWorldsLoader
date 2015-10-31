@@ -15,6 +15,7 @@
 		DA362D121BE50CE100A77151 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D111BE50CE100A77151 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D191BE519E300A77151 /* XYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D181BE519E300A77151 /* XYDataManager.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1B1BE5227200A77151 /* XYNetworkManager.m */; settings = {ASSET_TAGS = (); }; };
+		DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1E1BE5292D00A77151 /* XYUser.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		DA362D181BE519E300A77151 /* XYDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYDataManager.m; path = Core/XYDataManager.m; sourceTree = "<group>"; };
 		DA362D1A1BE5227200A77151 /* XYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYNetworkManager.h; path = Core/XYNetworkManager.h; sourceTree = "<group>"; };
 		DA362D1B1BE5227200A77151 /* XYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYNetworkManager.m; path = Core/XYNetworkManager.m; sourceTree = "<group>"; };
+		DA362D1D1BE5292D00A77151 /* XYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYUser.h; path = Core/XYUser.h; sourceTree = "<group>"; };
+		DA362D1E1BE5292D00A77151 /* XYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYUser.m; path = Core/XYUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				DA362D181BE519E300A77151 /* XYDataManager.m */,
 				DA362D1A1BE5227200A77151 /* XYNetworkManager.h */,
 				DA362D1B1BE5227200A77151 /* XYNetworkManager.m */,
+				DA362D1D1BE5292D00A77151 /* XYUser.h */,
+				DA362D1E1BE5292D00A77151 /* XYUser.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA362D191BE519E300A77151 /* XYDataManager.m in Sources */,
+				DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */,
 				DA362CF91BE504D500A77151 /* AppDelegate.m in Sources */,
 				DA362CF61BE504D500A77151 /* main.m in Sources */,
 				DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */,

@@ -35,9 +35,9 @@
     return self;
 }
 
-- (void)loadWorldsWithSuccessBlock:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock {
+- (void)getAvailableWorldsForUser:(XYUser *)user withSuccess:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock {
 
-
+    
 
 
 }

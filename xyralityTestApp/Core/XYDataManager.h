@@ -11,11 +11,10 @@
 typedef void(^XYLoadWorldsSuccessBlock)(void(^)());
 typedef void(^XYLoadWorldsFailureBlock)(NSError *error);
 
-
+@class XYUser;
 @interface XYDataManager : NSObject
 
 + (instancetype)sharedManager;
-
-- (void)loadWorldsWithSuccessBlock:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock;
+- (void)getAvailableWorldsForUser:(XYUser *)user withSuccess:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock;
 
 @end
