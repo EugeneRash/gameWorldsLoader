@@ -38,13 +38,13 @@
 
 - (IBAction)loginButtonAction:(id)sender {
     
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self activityEnabled:YES];
     
     XYUser *user = [[XYUser alloc] initWithLogin:self.emailTextfield.text password:self.passwordTextfield.text];
     [[XYDataManager sharedManager] getAvailableWorldsForUser:user withSuccess:^{
         
         [self performSegueWithIdentifier:@"showWorldsListSegue" sender:self];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self activityEnabled:NO];
 
         
     } failureBlock:^(NSError *error) {
@@ -54,10 +54,21 @@
         [alert addAction:ok];
         
         [self presentViewController:alert animated:YES completion:nil];
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self activityEnabled:NO];
 
     
     }];
     
 }
+
+- (void)activityEnabled:(BOOL)mode {
+
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = mode;
+    self.loginButton.enabled = !mode;
+    self.emailTextfield.enabled = !mode;
+    self.passwordTextfield.enabled = !mode;
+
+}
+
+
 @end

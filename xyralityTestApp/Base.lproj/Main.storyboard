@@ -72,6 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="4Qa-Ag-Isw" id="Ydb-Xb-88y"/>
+                        <outlet property="loginButton" destination="leg-MN-R7T" id="YMg-dV-Aja"/>
                         <outlet property="passwordTextfield" destination="XWR-gD-37W" id="2sl-pK-wJM"/>
                         <segue destination="StG-hH-nGA" kind="presentation" identifier="showWorldsListSegue" id="cU0-4B-Sxt"/>
                     </connections>
