@@ -51,12 +51,28 @@
     
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
+        
+        NSPropertyListFormat plistFormat;
+        NSDictionary *plistResponse = [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListImmutable format:&plistFormat error:&error];
+        
+        if (plistResponse[@"error"]) {
+            
+            if (failureBlock) {
+                failureBlock([XYNetworkManager genericError]);
+            }
+            
+            NSLog(@"Error: %@", plistResponse[@"error"]);
+            
+            return ;
+        }
+        
+        
         if (error) {
             if (failureBlock) {
                 failureBlock(error);
             }
         } else if (successBlock) {
-            successBlock(data);
+            successBlock(plistResponse);
         }
         
         
@@ -64,6 +80,15 @@
     
     
     [dataTask resume];
+
+}
+
++ (NSError *)genericError {
+
+    NSDictionary *details = @{NSLocalizedDescriptionKey : NSLocalizedString(@"Can't load game worlds. Please check your credentials and internet connection", nil), NSLocalizedFailureReasonErrorKey : @""};
+    NSError *error = [NSError errorWithDomain:@"com.test.xyralityTestApp" code:500 userInfo:details];
+    
+    return error;
 
 }
 

@@ -6,13 +6,15 @@
 //  Copyright © 2015 rash. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "XYLoginViewController.h"
+#import "XYDataManager.h"
+#import "XYUser.h"
 
-@interface LoginViewController ()
+@interface XYLoginViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation XYLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +36,17 @@
 }
 */
 
+- (IBAction)loginButtonAction:(id)sender {
+    
+    XYUser *user = [[XYUser alloc] init];
+    user.login = self.emailTextfield.text;
+    user.password = self.passwordTextfield.text;
+    
+    [[XYDataManager sharedManager] getAvailableWorldsForUser:user withSuccess:^{
+        
+    } failureBlock:^(NSError *error) {
+        
+    }];
+    
+}
 @end

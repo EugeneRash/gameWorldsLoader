@@ -7,6 +7,7 @@
 //
 
 #import "XYDataManager.h"
+#import "XYNetworkManager.h"
 
 @interface XYDataManager ();
 @property (nonatomic, strong) NSArray *loadedWorlds;
@@ -37,8 +38,18 @@
 
 - (void)getAvailableWorldsForUser:(XYUser *)user withSuccess:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock {
 
-    
+    [[XYNetworkManager sharedManager] loadWorldsWithUser:user withSuccess:^(NSDictionary *data) {
 
+        
+        
+    } failure:^(NSError *error) {
+        
+        if (failureBlock) {
+            failureBlock(error);
+        }
+        
+    }];
+    
 
 }
 

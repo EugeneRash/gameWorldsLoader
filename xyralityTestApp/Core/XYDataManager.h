@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^XYLoadWorldsSuccessBlock)(void(^)());
+typedef void(^XYLoadWorldsSuccessBlock)(void);
 typedef void(^XYLoadWorldsFailureBlock)(NSError *error);
 
 @class XYUser;

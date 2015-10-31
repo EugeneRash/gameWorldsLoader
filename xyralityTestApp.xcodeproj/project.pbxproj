@@ -12,7 +12,7 @@
 		DA362CFF1BE504D500A77151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA362CFD1BE504D500A77151 /* Main.storyboard */; };
 		DA362D011BE504D500A77151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA362D001BE504D500A77151 /* Assets.xcassets */; };
 		DA362D041BE504D500A77151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA362D021BE504D500A77151 /* LaunchScreen.storyboard */; };
-		DA362D121BE50CE100A77151 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D111BE50CE100A77151 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DA362D121BE50CE100A77151 /* XYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D111BE50CE100A77151 /* XYLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D191BE519E300A77151 /* XYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D181BE519E300A77151 /* XYDataManager.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1B1BE5227200A77151 /* XYNetworkManager.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1E1BE5292D00A77151 /* XYUser.m */; settings = {ASSET_TAGS = (); }; };
@@ -27,8 +27,8 @@
 		DA362D001BE504D500A77151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA362D031BE504D500A77151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA362D051BE504D500A77151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA362D101BE50CE100A77151 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/Login/LoginViewController.h; sourceTree = "<group>"; };
-		DA362D111BE50CE100A77151 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
+		DA362D101BE50CE100A77151 /* XYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYLoginViewController.h; path = Controllers/Login/XYLoginViewController.h; sourceTree = "<group>"; };
+		DA362D111BE50CE100A77151 /* XYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYLoginViewController.m; path = Controllers/Login/XYLoginViewController.m; sourceTree = "<group>"; };
 		DA362D171BE519E300A77151 /* XYDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYDataManager.h; path = Core/XYDataManager.h; sourceTree = "<group>"; };
 		DA362D181BE519E300A77151 /* XYDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYDataManager.m; path = Core/XYDataManager.m; sourceTree = "<group>"; };
 		DA362D1A1BE5227200A77151 /* XYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYNetworkManager.h; path = Core/XYNetworkManager.h; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		DA362D0C1BE50BA400A77151 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DA362D101BE50CE100A77151 /* LoginViewController.h */,
-				DA362D111BE50CE100A77151 /* LoginViewController.m */,
+				DA362D101BE50CE100A77151 /* XYLoginViewController.h */,
+				DA362D111BE50CE100A77151 /* XYLoginViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 				DA362CF91BE504D500A77151 /* AppDelegate.m in Sources */,
 				DA362CF61BE504D500A77151 /* main.m in Sources */,
 				DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */,
-				DA362D121BE50CE100A77151 /* LoginViewController.m in Sources */,
+				DA362D121BE50CE100A77151 /* XYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

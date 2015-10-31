@@ -23,8 +23,15 @@
 
 - (NSData *)mapUserData {
 
-    NSDictionary *userData = @{@"login" : self.login, @"password" : self.password, @"deviceType" : self.deviceType, @"deviceId" : self.deviceId};
-    NSData *data = [NSJSONSerialization dataWithJSONObject:userData options:kNilOptions error:nil];
+    
+    NSString *dataString = [NSString stringWithFormat:@"login=%@&password=%@&deviceType=%@&deviceId=%@", self.login, self.password, self.deviceType, self.deviceId];
+    NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+    
+
+    
+//    NSDictionary *userData = @{@"login" : self.login, @"password" : self.password, @"deviceType" : self.deviceType, @"deviceId" : self.deviceId};
+//    NSData *data = [NSJSONSerialization dataWithJSONObject:userData options:kNilOptions error:nil];
+    
     
     return data;
 
