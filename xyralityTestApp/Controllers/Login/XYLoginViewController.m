@@ -38,10 +38,14 @@
 
 - (IBAction)loginButtonAction:(id)sender {
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     XYUser *user = [[XYUser alloc] initWithLogin:self.emailTextfield.text password:self.passwordTextfield.text];
     [[XYDataManager sharedManager] getAvailableWorldsForUser:user withSuccess:^{
         
         [self performSegueWithIdentifier:@"showWorldsListSegue" sender:self];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
         
     } failureBlock:^(NSError *error) {
         
@@ -50,6 +54,8 @@
         [alert addAction:ok];
         
         [self presentViewController:alert animated:YES completion:nil];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
     
     }];
     
