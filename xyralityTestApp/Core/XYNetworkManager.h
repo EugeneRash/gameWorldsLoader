@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class XYUser;
-typedef void(^XYNetworkManagerSuccessBlock)(NSDictionary *data);
+typedef void(^XYNetworkManagerSuccessBlock)(NSDictionary *result);
 typedef void(^XYNetworkManagerFailureBlock)(NSError *error);
 
 @interface XYNetworkManager : NSObject
