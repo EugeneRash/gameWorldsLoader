@@ -12,7 +12,7 @@
 
 @implementation XYUser
 
-- (instancetype)init {
+- (instancetype)initWithLogin:(NSString *)login password:(NSString *)password {
     self = [super init];
     if (self) {
         self.deviceType = [NSString stringWithFormat:@"%@ - %@ %@", [[UIDevice currentDevice] model], [[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion]];

@@ -38,10 +38,7 @@
 
 - (IBAction)loginButtonAction:(id)sender {
     
-    XYUser *user = [[XYUser alloc] init];
-    user.login = self.emailTextfield.text;
-    user.password = self.passwordTextfield.text;
-    
+    XYUser *user = [[XYUser alloc] initWithLogin:self.emailTextfield.text password:self.passwordTextfield.text];
     [[XYDataManager sharedManager] getAvailableWorldsForUser:user withSuccess:^{
         
         [self performSegueWithIdentifier:@"showWorldsListSegue" sender:self];

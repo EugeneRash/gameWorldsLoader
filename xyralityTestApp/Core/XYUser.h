@@ -10,11 +10,12 @@
 
 @interface XYUser : NSObject
 
-@property (nonatomic, strong) NSString *login;
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, copy) NSString *login;
+@property (nonatomic, copy) NSString *password;
 @property (nonatomic, strong) NSString *deviceType;
 @property (nonatomic, strong) NSString *deviceId;
 
+- (instancetype)initWithLogin:(NSString *)login password:(NSString *)password;
 - (NSData *)mapUserData;
 
 @end
