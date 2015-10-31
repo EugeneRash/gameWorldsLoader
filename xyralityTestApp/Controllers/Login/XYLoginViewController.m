@@ -48,6 +48,12 @@
         
     } failureBlock:^(NSError *error) {
         
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:ok];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    
     }];
     
 }
