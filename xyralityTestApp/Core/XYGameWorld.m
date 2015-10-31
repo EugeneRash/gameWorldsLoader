@@ -10,4 +10,22 @@
 
 @implementation XYGameWorld
 
+- (instancetype)initWithResponse:(NSDictionary *)response
+{
+    self = [super init];
+    if (self) {
+
+        self.country = response[@"country"];
+        self.worldId = response[@"worldId"];
+        self.language = response[@"language"];
+        self.mapURL = response[@"mapURL"];
+        self.name = response[@"name"];
+        self.url = response[@"url"];
+        self.worldStatus = response[@"worldStatus"];
+
+    }
+    return self;
+}
+
+
 @end

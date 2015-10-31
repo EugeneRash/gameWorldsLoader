@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *worldStatus;
 
+- (instancetype)initWithResponse:(NSDictionary *)response;
 
 @end

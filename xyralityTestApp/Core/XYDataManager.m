@@ -8,9 +8,10 @@
 
 #import "XYDataManager.h"
 #import "XYNetworkManager.h"
+#import "XYGameWorld.h"
 
 @interface XYDataManager ();
-@property (nonatomic, strong) NSArray *loadedWorlds;
+@property (nonatomic, strong) NSMutableArray *loadedWorlds;
 @end
 
 
@@ -31,7 +32,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-
+        self.loadedWorlds = [NSMutableArray array];
     }
     return self;
 }
@@ -46,11 +47,14 @@
             return;
         }
         
-        if (![strongSelf parseServerResponse:result]) {
+        if ([strongSelf parseServerResponse:result]) {
+            NSLog(@"Parsing Completed");
+            successBlock();
+        } else {
             NSDictionary *details = @{NSLocalizedDescriptionKey : NSLocalizedString(@"Can't load game worlds. Server returned empty data", nil), NSLocalizedFailureReasonErrorKey : @""};
             NSError *error = [NSError errorWithDomain:@"com.test.xyralityTestApp" code:500 userInfo:details];
             failureBlock(error);
-
+            NSLog(@"Error: response parsing failed");
         }
         
     } failure:^(NSError *error) {
@@ -66,18 +70,20 @@
 
 - (BOOL)parseServerResponse:(NSDictionary *)response {
 
+    BOOL result = NO;
     if (response[@"allAvailableWorlds"] && [response[@"allAvailableWorlds"] isKindOfClass:[NSArray class]]) {
         
         NSArray *allAvailableWorlds = [response[@"allAvailableWorlds"] copy];
         if (allAvailableWorlds.count > 0) {
-            
+            for (NSDictionary *worldData in allAvailableWorlds) {
+                [self.loadedWorlds addObject:[[XYGameWorld alloc] initWithResponse:worldData]];
+            }
+            result = YES;
         }
         
-        
-//        self.loadedWorlds = result[@"allAvailableWorlds"];
     }
     
-    return YES;
+    return result;
     
 }
 
