@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  xyralityTestApp
 //
 //  Created by rash on 10/31/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LoginViewController : UIViewController
 
 @end
-
