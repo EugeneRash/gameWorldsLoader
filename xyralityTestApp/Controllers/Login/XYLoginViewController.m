@@ -44,6 +44,8 @@
     
     [[XYDataManager sharedManager] getAvailableWorldsForUser:user withSuccess:^{
         
+        [self performSegueWithIdentifier:@"showWorldsListSegue" sender:self];
+        
     } failureBlock:^(NSError *error) {
         
     }];

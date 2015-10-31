@@ -73,11 +73,40 @@
                     <connections>
                         <outlet property="emailTextfield" destination="4Qa-Ag-Isw" id="Ydb-Xb-88y"/>
                         <outlet property="passwordTextfield" destination="XWR-gD-37W" id="2sl-pK-wJM"/>
+                        <segue destination="T5R-ai-ODi" kind="presentation" identifier="showWorldsListSegue" id="cU0-4B-Sxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="389"/>
+            <point key="canvasLocation" x="584" y="379"/>
+        </scene>
+        <!--Worlds List Table-->
+        <scene sceneID="2H5-sb-zpm">
+            <objects>
+                <tableViewController id="T5R-ai-ODi" customClass="XYWorldsListTable" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PMh-tb-X8L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jGR-fL-ATf">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jGR-fL-ATf" id="22J-Ob-i8e">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T5R-ai-ODi" id="87s-mE-VYO"/>
+                            <outlet property="delegate" destination="T5R-ai-ODi" id="nF4-qj-YAN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoV-23-NRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="379"/>
         </scene>
     </scenes>
 </document>

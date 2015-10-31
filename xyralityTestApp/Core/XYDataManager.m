@@ -40,30 +40,44 @@
 - (void)getAvailableWorldsForUser:(XYUser *)user withSuccess:(XYLoadWorldsSuccessBlock)successBlock failureBlock:(XYLoadWorldsFailureBlock)failureBlock {
 
     __weak typeof(self) weakSelf = self;
-    [[XYNetworkManager sharedManager] loadWorldsWithUser:user withSuccess:^(NSDictionary *result) {
+    dispatch_async(dispatch_queue_create("", DISPATCH_QUEUE_SERIAL), ^{
 
-        typeof(weakSelf) strongSelf = weakSelf;
-        if (strongSelf == nil) {
-            return;
-        }
+        [[XYNetworkManager sharedManager] loadWorldsWithUser:user withSuccess:^(NSDictionary *result) {
+
+            typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf == nil) {
+                return;
+            }
+            
+            if ([strongSelf parseServerResponse:result]) {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    successBlock();
+                });
+                NSLog(@"Parsing Completed");
+
+            } else {
+                NSDictionary *details = @{NSLocalizedDescriptionKey : NSLocalizedString(@"Can't load game worlds. Server returned empty data", nil), NSLocalizedFailureReasonErrorKey : @""};
+                NSError *error = [NSError errorWithDomain:@"com.test.xyralityTestApp" code:500 userInfo:details];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    failureBlock(error);
+                });
+                
+                NSLog(@"Error: response parsing failed");
+            }
+            
+        } failure:^(NSError *error) {
+            
+            if (failureBlock) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    failureBlock(error);
+                });
+            }
+            
+        }];
         
-        if ([strongSelf parseServerResponse:result]) {
-            NSLog(@"Parsing Completed");
-            successBlock();
-        } else {
-            NSDictionary *details = @{NSLocalizedDescriptionKey : NSLocalizedString(@"Can't load game worlds. Server returned empty data", nil), NSLocalizedFailureReasonErrorKey : @""};
-            NSError *error = [NSError errorWithDomain:@"com.test.xyralityTestApp" code:500 userInfo:details];
-            failureBlock(error);
-            NSLog(@"Error: response parsing failed");
-        }
-        
-    } failure:^(NSError *error) {
-        
-        if (failureBlock) {
-            failureBlock(error);
-        }
-        
-    }];
+    });
     
 
 }

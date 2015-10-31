@@ -17,6 +17,7 @@
 		DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1B1BE5227200A77151 /* XYNetworkManager.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D1F1BE5292D00A77151 /* XYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D1E1BE5292D00A77151 /* XYUser.m */; settings = {ASSET_TAGS = (); }; };
 		DA362D221BE54B3600A77151 /* XYGameWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D211BE54B3600A77151 /* XYGameWorld.m */; settings = {ASSET_TAGS = (); }; };
+		DA362D251BE5514900A77151 /* XYWorldsListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = DA362D241BE5514900A77151 /* XYWorldsListTable.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		DA362D1E1BE5292D00A77151 /* XYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYUser.m; path = Core/XYUser.m; sourceTree = "<group>"; };
 		DA362D201BE54B3600A77151 /* XYGameWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYGameWorld.h; path = Core/XYGameWorld.h; sourceTree = "<group>"; };
 		DA362D211BE54B3600A77151 /* XYGameWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYGameWorld.m; path = Core/XYGameWorld.m; sourceTree = "<group>"; };
+		DA362D231BE5514900A77151 /* XYWorldsListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYWorldsListTable.h; path = Controllers/WorldsList/XYWorldsListTable.h; sourceTree = "<group>"; };
+		DA362D241BE5514900A77151 /* XYWorldsListTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XYWorldsListTable.m; path = Controllers/WorldsList/XYWorldsListTable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				DA362D101BE50CE100A77151 /* XYLoginViewController.h */,
 				DA362D111BE50CE100A77151 /* XYLoginViewController.m */,
+				DA362D231BE5514900A77151 /* XYWorldsListTable.h */,
+				DA362D241BE5514900A77151 /* XYWorldsListTable.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				DA362CF91BE504D500A77151 /* AppDelegate.m in Sources */,
 				DA362CF61BE504D500A77151 /* main.m in Sources */,
 				DA362D1C1BE5227200A77151 /* XYNetworkManager.m in Sources */,
+				DA362D251BE5514900A77151 /* XYWorldsListTable.m in Sources */,
 				DA362D121BE50CE100A77151 /* XYLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
