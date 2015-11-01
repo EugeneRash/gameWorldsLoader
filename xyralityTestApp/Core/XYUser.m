@@ -15,6 +15,8 @@
 - (instancetype)initWithLogin:(NSString *)login password:(NSString *)password {
     self = [super init];
     if (self) {
+        self.login = login;
+        self.password = password;
         self.deviceType = [NSString stringWithFormat:@"%@ - %@ %@", [[UIDevice currentDevice] model], [[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion]];
         self.deviceId = [[NSUUID UUID] UUIDString];
     }
